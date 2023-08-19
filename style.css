@@ -1,0 +1,233 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #5d6d6c3f;
+    color: #333;
+}
+
+/* Header and navigation styles */
+header {
+    background-color: #352e2e;
+    color: rgb(99, 26, 26);
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Home section styles */
+#home {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #4ead76;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.profile-image {
+        width: 300px; /* Adjust this value as needed */
+        height: auto; /* Automatically maintain aspect ratio */
+        max-width: 90%; /* Ensure the image doesn't exceed its container */
+    }
+
+
+
+
+#about{
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #463b2a;
+    color: #8eca4994;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+/* Flexbox layout for other sections */
+.section {
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Project cards layout using Flexbox */
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-card {
+    position: relative;
+    flex: 1;
+    background-color: #c5b196ce;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    max-width: 100%;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+}
+
+.project-card p {
+    margin: 12px 0;
+}
+
+/* Sticker styles */
+.sticker {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 60px;
+    height: 70px;
+    background-color: #ff7f50;
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    transform: scale(0);
+}
+
+.project-card:hover .sticker {
+    transform: scale(1);
+}
+
+/* Contact form layout using Flexbox */
+#contact{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #5f6aa76c;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input{
+    height: 30px;
+    padding: 0 5px;
+}
+#contact textarea{
+    height: 70px;
+    padding: 0 5px;
+}
+#contact label,
+#contact input,
+#contact textarea {
+    width: 100%;
+}
+
+#contact button {
+    background-color: #333;
+    color: rgb(243, 238, 238);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.contact iZ{
+    font-size: 25%;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    nav li {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .project-card {
+        flex-basis: calc(50% - 20px);
+    }
+}
